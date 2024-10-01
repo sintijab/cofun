@@ -1,0 +1,9 @@
+{
+  "name": "co-fun-ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/co-fun-ui/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project co-fun-ui --web",
+  "targets": {}
+}
