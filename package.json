@@ -5,7 +5,7 @@
   "scripts": {},
   "private": true,
   "engines": {
-    "node": "21.2.0"
+    "node": "20.18.1"
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
