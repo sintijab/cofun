@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx build co-fun -t build --no-cloud --prod && cp -r ./co-fun/out ./out && cp -r ./co-fun/.next ./.next",
-    "predeploy": "nx build co-fun -t build --no-cloud --prod && cp -r ./co-fun/out ./out && cp -r ./co-fun/.next ./.next"
+    "build": "nx build co-fun --no-cloud --prod && cp -r ./co-fun/out ./out && cp -r ./co-fun/.next ./.next",
+    "predeploy": "nx build co-fun --no-cloud --prod && cp -r ./co-fun/out ./out && cp -r ./co-fun/.next ./.next"
   },
   "private": true,
   "engines": {
-    "node": "20.18.1"
+    "node": "20.17.0"
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
