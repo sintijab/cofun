@@ -1,6 +1,6 @@
 export const suggestionsMocks = {
   suggestions: [
-  `Let's do it`,
-  `Great`,
-  `Not now`
+  { answer: `Let's do it`, key: true },
+  { answer: `Great`, key: true },
+  { answer: `Not now`, key: true },
 ]};

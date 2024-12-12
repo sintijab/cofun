@@ -1,0 +1,26 @@
+{
+  "name": "socket-io",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/socket-io/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "socket-io:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "socket-io:build:development"
+        },
+        "production": {
+          "buildTarget": "socket-io:build:production"
+        }
+      }
+    }
+  }
+}

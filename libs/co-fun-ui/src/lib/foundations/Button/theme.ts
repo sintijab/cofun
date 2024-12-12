@@ -1,7 +1,7 @@
 import { defineStyle, defineStyleConfig } from '@chakra-ui/react'
 
 const primary = defineStyle({
-    background: 'primary.green',
+    background: 'button.action',
     fontWeight: '500',
     letterSpacing: '0.02em',
     textTransform: 'uppercase',
@@ -16,6 +16,29 @@ const outline = defineStyle({
   fontSize: '10.5pt',
   border: '2px',
   borderColor: 'border.action',
+})
+
+const outline_dark = defineStyle({
+  background: 'primary.white',
+  fontWeight: '600',
+  letterSpacing: '0.02em',
+  color: 'primary.default',
+  fontFamily: '"Inter", sans-serif;',
+  fontSize: '10.5pt',
+  border: '1px',
+  borderColor: 'border.dark',
+})
+
+const list = defineStyle({
+  background: 'primary.white',
+  fontWeight: '600',
+  letterSpacing: '0.02em',
+  color: 'primary.dark',
+  fontFamily: '"Inter", sans-serif;',
+  fontSize: '10.5pt',
+  border: '1px',
+  borderColor: 'border.dark',
+  borderRadius: '.7rem',
 })
 
 const transparent = defineStyle({
@@ -33,9 +56,9 @@ export const buttonTheme = defineStyleConfig({
     color: 'primary.default',
     border: '0',
     borderRadius: '10rem',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
-  variants: { primary, outline, transparent },
+  variants: { primary, outline, outline_dark, transparent, list },
   sizes: {
     sm: {
       fontSize: '10.5pt',
@@ -43,7 +66,7 @@ export const buttonTheme = defineStyleConfig({
       display: 'inline-flex'
     },
     lg: {
-      fontSize: '16.5pt',
+      fontSize: '13.5pt',
       padding: '1.9rem 2rem',
       display: 'inline-flex'
     }

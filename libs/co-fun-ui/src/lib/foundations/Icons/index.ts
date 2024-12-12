@@ -35,5 +35,14 @@ import { EditIcon } from './EditIcon';
 import { StarIcon } from './StarIcon';
 import { StarIconFilled } from './StarIconFilled';
 import { MicrophoneIcon } from './MicrophoneIcon';
+import { EyeIcon } from './EyeIcon';
+import { EyeOffIcon } from './EyeOffIcon';
+import { LipsIcon } from './LipsIcon';
+import { MonitorIcon } from './MonitorIcon';
+import { DiagramIcon } from './DiagramIcon';
+import { NetworkIcon } from './NetworkIcon';
+import { CertificateIcon } from './CertificateIcon';
+import { StarsIcon } from './Stars';
+import { HamburgerIcon } from './HamburgerIcon';
 
-export { SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, LinkedInIcon, XIcon, YoutubeIcon, InstagramIcon, PinContainerIcon, UserPlusIcon, ToggleOnIcon, ChatIcon, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, ProfileAvatarIcon, HamburgerMenuIcon, PlusIcon, ChatSingleIcon, TrendsIcon, ExploreIcon, WalletIcon, SettingsIcon, BackIcon, CalendarIcon, VerticalEllipsisIcon, EditIcon, StarIcon, StarIconFilled, MicrophoneIcon };
+export { SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, LinkedInIcon, XIcon, YoutubeIcon, InstagramIcon, PinContainerIcon, UserPlusIcon, ToggleOnIcon, ChatIcon, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, ProfileAvatarIcon, HamburgerMenuIcon, PlusIcon, ChatSingleIcon, TrendsIcon, ExploreIcon, WalletIcon, SettingsIcon, BackIcon, CalendarIcon, VerticalEllipsisIcon, EditIcon, StarIcon, StarIconFilled, MicrophoneIcon, EyeIcon, EyeOffIcon, LipsIcon, MonitorIcon, DiagramIcon, NetworkIcon, CertificateIcon, StarsIcon, HamburgerIcon };

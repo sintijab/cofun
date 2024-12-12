@@ -19,10 +19,12 @@ const colorTheme = {
         default: '#757575',
         green: '#14E44F',
         lightGrey: '#D3D3D3',
+        info: '#f6ff39',
       },
       border: {
         default: '#D9D9D9',
         action: '#1DC64D',
+        dark: '#565656'
       },
       button: {
         action: '#1DC64D',
@@ -30,7 +32,8 @@ const colorTheme = {
       },
       background: {
         green: '#40AE38',
-        grey: '#0E0E0E'
+        grey: '#0E0E0E',
+        text: '#e2e2e2'
       },
       rating: {
         filled: '#B592CC',
@@ -45,6 +48,14 @@ const colorTheme = {
         defaultBgTransparent: 'rgba(254, 247, 255, 0.55)',
         authorBg: '#625B71',
         suggestions: '#F0DCFC'
+      },
+      reviews: {
+        lilac: '#dd9dcc',
+        green: '#00cf75',
+        blue: '#3762ff',
+        lightBlue: '#8ab1f3',
+        darkBlue: '#304697',
+        default: '#484848'
       }
     },
   };

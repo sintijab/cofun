@@ -2,9 +2,14 @@ import {
   Box,
   ChakraBaseProvider,
   extendTheme,
+  Flex,
+  Heading,
+  Input as InputBase,
+  Textarea
 } from '@chakra-ui/react';
-import { AvatarIcon, BackIcon, ButtonPrimary, CalendarIcon, ChatSingleIcon, EditIcon, ExploreIcon, HamburgerMenuIcon, Link, Logo, MicrophoneIcon, PlusIcon, ProfileAvatarIcon, SettingsIcon, StarIcon, StarIconFilled, TextBase, TrendsIcon, VerticalEllipsisIcon, WalletIcon, } from './foundations';
-import { NavigationTop, Hero, HeroMinimal, Card, Activity, Footer, HeroPersonal, Pagination, NavigationSide, NavigationChat, ConversationsList, ConvoListItem, Messages, Rating, Input } from './components';
+
+import { AvatarIcon, BackIcon, ButtonPrimary, CalendarIcon, CertificateIcon, ChatSingleIcon, DiagramIcon, EditIcon, ExploreIcon, HamburgerIcon, HamburgerMenuIcon, Link, Logo, MicrophoneIcon, MonitorIcon, NetworkIcon, PlusIcon, ProfileAvatarIcon, SettingsIcon, StarIcon, StarIconFilled, StarsIcon, TextBase, TrendsIcon, VerticalEllipsisIcon, WalletIcon, } from './foundations';
+import { NavigationTop, Hero, HeroMinimal, Card, Activity, Footer, HeroPersonal, Pagination, NavigationSide, NavigationChat, ConversationsList, ConvoListItem, Messages, Rating, Input, Loader, ButtonList, ModalBase, Sketch, Carousel, StackedSingleBar, Timeline, BearAnimation, ReviewCards, PricingTable } from './components';
 import { CardDeck, SectionLayout, ActivityGroup, ProjectList } from './patterns';
 import { Project, InitiativeOverview, ProjectDetails, AIAssistantChat } from './templates';
 import { buttonTheme } from './foundations/Button/theme';
@@ -13,12 +18,17 @@ import { textTheme } from './foundations/Typography/TextBase/theme';
 import colorTheme from './foundations/Colors/theme';
 import { cardTheme } from './components/Card/theme';
 import * as iconsBase from './foundations/Icons';
+import { loaderTheme } from './components/Loader/theme';
+import { headlineH1Theme } from './components/Headline/theme';
+import { Poster } from './components/Headline';
+import './globals.css';
 
 const theme = extendTheme({
-  components: { Button: buttonTheme, Link: linkTheme, TextBase: textTheme, Card: cardTheme },
+  components: { Button: buttonTheme, Link: linkTheme, TextBase: textTheme, Card: cardTheme, Loader: loaderTheme, Heading: headlineH1Theme },
   colors: colorTheme.colors,
   fonts: {
     body: '"Jost", sans-serif;',
+    heading: '"Inter", sans-serif;',
   },
   fontWeights: {
     normal: 400,
@@ -28,7 +38,7 @@ const theme = extendTheme({
   textStyles: {
     'hero-h1': {
       // fontSize: ['48px', '72px'],
-      fontSize: '54pt',
+      fontSize: ['44pt','54pt'],
       fontFamily: '"Inter", sans-serif;',
       fontWeight: '700',
       lineHeight: '120%',
@@ -69,7 +79,7 @@ const theme = extendTheme({
       fontWeight: 'semibold',
       lineHeight: '120%',
       letterSpacing: '-0.02em',
-      fontSize: '18.75pt'
+      fontSize: ['16.75pt', '18.75pt']
     },
     'activity-descr': {
       lineHeight: '130%',
@@ -142,11 +152,54 @@ const theme = extendTheme({
       letterSpacing: "0.05em",
       fontSize: "9pt",
       fontWeight: "500",
+    },
+    'button-select': {
+      fontFamily: '"Inter", sans-serif;',
+      fontSize: '11.5pt',
+      color: 'primary.default'
+    },
+    'button-select-title': {
+      fontFamily: '"Inter", sans-serif;',
+      fontSize: '12.5pt',
+      fontWeight: 600,
+      color: 'primary.default'
+    },
+    'button-select-info': {
+      fontFamily: '"Inter", sans-serif;',
+      fontSize: '11pt',
+      fontWeight: 600,
+      color: 'primary.default'
+    },
+    'button-select-descr': {
+      fontFamily: '"Inter", sans-serif;',
+      fontSize: '11pt',
+      fontWeight: 400,
+      color: 'primary.default'
+    },
+    'poster-descr': {
+      display: 'block',
+      fontSize: '1em',
+      letterSpacing: '5px',
+      fontWeight: '500',
+      textTransform: 'uppercase',
+      color: 'secondary.info',
+      paddingTop: '0.8em',
+      marginBottom: '0.6em'
+    },
+    'background-review': {
+      fontSize: ["1.7rem", "2rem"],
+      fontFamily: '"gingerRegular"',
+      color: 'reviews.regular'
+    },
+    'background-text': {
+      fontSize: ['8em', '14em'],
+      color: 'background.text',
+      fontFamily: '"gingerBold"'
     }
   }
 })
 
-export function CoFunUiProvider({ children }: { children: React.ReactElement}) {
+export function CoFunUiProvider({ children }: { children: React.ReactNode }) {
   return (
     <ChakraBaseProvider theme={theme}>
       {children}
@@ -154,10 +207,10 @@ export function CoFunUiProvider({ children }: { children: React.ReactElement}) {
   );
 }
 
-const { SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, PinContainerIcon, ChatIcon, LinkedInIcon, InstagramIcon, XIcon, YoutubeIcon, UserPlusIcon, ToggleOnIcon, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon } = iconsBase;
-const icons = [SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, PinContainerIcon, ChatIcon, LinkedInIcon, InstagramIcon, XIcon, YoutubeIcon, UserPlusIcon, ToggleOnIcon, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, ProfileAvatarIcon, HamburgerMenuIcon, PlusIcon, ChatSingleIcon, TrendsIcon, ExploreIcon, WalletIcon, SettingsIcon, BackIcon, CalendarIcon, VerticalEllipsisIcon, EditIcon, StarIcon, StarIconFilled, MicrophoneIcon ];
+const { SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, PinContainerIcon, ChatIcon, LinkedInIcon, InstagramIcon, XIcon, YoutubeIcon, UserPlusIcon, ToggleOnIcon, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, LipsIcon } = iconsBase;
+const icons = [SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, PinContainerIcon, ChatIcon, LinkedInIcon, InstagramIcon, XIcon, YoutubeIcon, UserPlusIcon, ToggleOnIcon, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, ProfileAvatarIcon, HamburgerMenuIcon, PlusIcon, ChatSingleIcon, TrendsIcon, ExploreIcon, WalletIcon, SettingsIcon, BackIcon, CalendarIcon, VerticalEllipsisIcon, EditIcon, StarIcon, StarIconFilled, MicrophoneIcon, LipsIcon, MonitorIcon, DiagramIcon, NetworkIcon, NetworkIcon, CertificateIcon, HamburgerIcon];
 
-export { Box, ButtonPrimary, Link, NavigationTop, SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, LinkedInIcon, InstagramIcon, XIcon, YoutubeIcon, Logo, Hero, Card, TextBase, CardDeck, SectionLayout, HeroMinimal, Activity, ActivityGroup, Project, InitiativeOverview, Footer, HeroPersonal, PinContainerIcon, UserPlusIcon, ToggleOnIcon, ChatIcon, ProjectList, ProjectDetails, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, icons, Pagination, ProfileAvatarIcon, HamburgerMenuIcon, PlusIcon, ChatSingleIcon, TrendsIcon, ExploreIcon, WalletIcon, SettingsIcon, BackIcon, CalendarIcon, VerticalEllipsisIcon, NavigationSide, NavigationChat, ConversationsList, AvatarIcon, EditIcon, ConvoListItem, Messages, Rating, Input, AIAssistantChat };
+export { Flex, Box, ButtonPrimary, Link, NavigationTop, SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, LinkedInIcon, InstagramIcon, XIcon, YoutubeIcon, Logo, Hero, Card, TextBase, CardDeck, SectionLayout, HeroMinimal, Activity, ActivityGroup, Project, InitiativeOverview, Footer, HeroPersonal, PinContainerIcon, UserPlusIcon, ToggleOnIcon, ChatIcon, ProjectList, ProjectDetails, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, icons, Pagination, ProfileAvatarIcon, HamburgerMenuIcon, PlusIcon, ChatSingleIcon, TrendsIcon, ExploreIcon, WalletIcon, SettingsIcon, BackIcon, CalendarIcon, VerticalEllipsisIcon, NavigationSide, NavigationChat, ConversationsList, AvatarIcon, EditIcon, ConvoListItem, Messages, Rating, Input, AIAssistantChat, Loader, LipsIcon, ButtonList, ModalBase, Sketch, Carousel, StackedSingleBar, Heading, Poster, Timeline, BearAnimation, ReviewCards, MonitorIcon, DiagramIcon, NetworkIcon, CertificateIcon, StarsIcon, PricingTable, InputBase, Textarea, HamburgerIcon };
 
 export default CoFunUiProvider;
 

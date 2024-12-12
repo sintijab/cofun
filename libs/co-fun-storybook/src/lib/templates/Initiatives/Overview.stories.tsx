@@ -13,7 +13,6 @@ export const Overview: Story = {
   args: {
     title: 'Literacy and Innovation Month',
     author: 'Sintija Birgele',
-    backersAmount: '8,500+',
     description: '“Our community is driven by a shared purpose: to make a better world through education, research, and innovation. This project has been created as part of September - National Literacy Month, a time to reflect on the importance and impact of literacy in our day-to-day lives. All the endorsements from this fundraising will be donated to the United Nations Relief and Works Agency.”',
     isFollowing: true,
     profile: './profile.jpg'

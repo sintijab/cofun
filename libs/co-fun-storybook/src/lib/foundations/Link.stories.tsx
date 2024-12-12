@@ -9,7 +9,7 @@ type Story = StoryObj<typeof Link>;
 
 export const LinkBase: Story = {
   args: {
-    label: 'Link',
+    children: 'Link',
     href: '#link',
     variant: 'nav'
   }

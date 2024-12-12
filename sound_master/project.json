@@ -1,0 +1,26 @@
+{
+  "name": "sound_master",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "sound_master/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "sound_master:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sound_master:build:development"
+        },
+        "production": {
+          "buildTarget": "sound_master:build:production"
+        }
+      }
+    }
+  }
+}

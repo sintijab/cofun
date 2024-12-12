@@ -10,9 +10,9 @@ export const ConvoListItem = (convo: IConversations) => {
     return (
     <Flex p="1.125rem 1rem 1.125rem 1rem" alignItems="center" bg={convo.isActive ? "chat.convoBg" : "transparent"} justifyContent="space-between">
       <Flex>
-        {convo?.image ? <Image src={convo.image} h="2.5rem" borderRadius="50%" mr="1rem" /> : <AvatarIcon mr="1rem">{convo.author.substring(0, 1)}</AvatarIcon>}
+        {convo?.image && typeof convo.image === 'string' ? <Image src={convo.image} h="2.5rem" borderRadius="50%" mr="1rem" /> : convo?.image && typeof convo.image !== 'string' ? convo.image : convo.author ? <AvatarIcon mr="1rem">{convo.author.substring(0, 1)}</AvatarIcon> : <></>}
         <Box mr="1rem">
-          <TextBase textStyle="chat">{truncate(`${convo.author}: ${convo.title}`, 24)}</TextBase>
+          <TextBase textStyle="chat">{truncate(`${convo.author ? convo.author + ': ' : ''}${convo.title}`, 24)}</TextBase>
           <TextBase letterSpacing="0.025em" fontSize="10.5pt">{convo.category}</TextBase>
         </Box>
       </Flex>
