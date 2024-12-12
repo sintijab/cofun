@@ -24,10 +24,15 @@ jobs:
       - name: Install dependencies
         uses: ./.github/workflows/setup-node
 
-      - name: Upload artifact
+      - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./co-fun/out
+          path: ./out
+      
+      - name: Upload nextjs build
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./.next
 
   deploy:
     environment:
