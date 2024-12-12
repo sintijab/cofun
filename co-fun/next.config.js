@@ -8,6 +8,10 @@ const { composePlugins, withNx } = require('@nx/next');
  **/
 const nextConfig = {
   output: 'export',
+  reactStrictMode: true,
+  bbasePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
+  assetPrefix: process.env.ASSET_PREFIX || "",
+  images: { unoptimized: true },
   nx: {
     // Set this to true if you would like to to use SVGR
     // See: https://github.com/gregberge/svgr
