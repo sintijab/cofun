@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx build co-fun --no-cloud --prod && cp -r ./co-fun/out ./out && cp -r ./co-fun/.next ./.next",
-    "predeploy": "nx build co-fun --no-cloud --prod && cp -r ./co-fun/out ./out && cp -r ./co-fun/.next ./.next",
+    "build": "nx affected -t build --no-cloud --prod && cp -r ./co-fun/out ./out && cp -r ./co-fun/.next ./.next",
+    "predeploy": "nx affected -t build --no-cloud --prod && cp -r ./co-fun/out ./out && cp -r ./co-fun/.next ./.next",
     "deploy": "gh-pages -d out"
   },
   "private": true,
