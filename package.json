@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx build co-fun --prod",
-    "predeploy": "nx build co-fun --prod",
-    "deploy": "gh-pages -d ./co-fun/out"
+    "build": "nx build co-fun --prod && cp -r ./co-fun/out ./out && cp -r ./co-fun/.next ./.next",
+    "predeploy": "nx build co-fun --prod && cp -r ./co-fun/out ./out && cp -r ./co-fun/.next ./.next",
+    "deploy": "gh-pages -d out"
   },
   "private": true,
   "engines": {
-    "node": "20.18.1"
+    "node": "20.17.0"
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
