@@ -27,7 +27,7 @@ export default function Index() {
   useScrollToHash()
 
   const list = trendsList.map((sound, i) =>
-    <Flex key={i} justifyContent="center" alignItems="center" position="relative"><Link href={sound?.source || '/trends'} isExternal={true} variant="card" position="absolute" p=".5rem" textAlign="center">{`${sound.author?.toUpperCase()} - ${sound.title?.toUpperCase()}`}</Link><Sketch reset={false} w={300} h={300} customColors={generateColorPalettes} /></Flex>
+    <Flex key={i} justifyContent="center" alignItems="center" position="relative"><Link href={sound?.source || '/trends'} isExternal={true} variant="card" position="absolute" p=".5rem" textAlign="center">{`${sound.author?.toUpperCase()} - ${sound.title?.toUpperCase()}`}</Link>{typeof window !== undefined && <Sketch reset={false} w={300} h={300} customColors={generateColorPalettes} />}</Flex>
   );
   const chunkedItems = _.chunk(list, 3);
   const args = {

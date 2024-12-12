@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ButtonPrimary } from '@co-fun/ui';
 import { useState } from 'react';
 
-const SketchBase = dynamic(() => import('@co-fun/ui').then((data) => data.Sketch), {ssr: false})!; //load it on client side only
+const SketchBase = dynamic(() => import('@co-fun/ui').then((data) => data.Sketch), {ssr: false})!;
 
 
 const meta: Meta = {

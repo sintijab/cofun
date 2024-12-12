@@ -1,20 +1,15 @@
-// @ts-nocheck
-"use client"
+"use client";
 import React from 'react';
 import dynamic from 'next/dynamic';
-
-const p5 = dynamic(() => import('p5').then((mod) => mod.default), {
-  ssr: false,
-})
+import p5 from 'p5';
 
 const P5Wrapper = dynamic(import('./P5Wrapper'), {
-  ssr: false,
-  loading: () => <div>Loading Background...</div>,
+  ssr: false
 });
 
 // Global variables for colors and accentColors, which will be assigned in setup()
-let colors = [];
-let accentColors = [];
+let colors: any[] = [];
+let accentColors: any[] = [];
 
 // Class for the sculptural shape
 class SculpturalShape {
@@ -23,12 +18,12 @@ class SculpturalShape {
   points;
   useCurves;
   angleOffset;
-  vertices;
-  depths;
+  vertices: any[];
+  depths: any[];
   colors;
   accentColors;
 
-  constructor(p5, radius, points, useCurves) {
+  constructor(p5: p5, radius: number, points: number, useCurves: boolean) {
     this.p5 = p5;
     this.radius = radius;
     this.points = points;
@@ -143,9 +138,6 @@ const generateColorPalettes = (p5: p5) => {
 };
 
 const Sketch: React.FC<{ reset: boolean, w?: number, h?: number, customColors?: (p5: p5) => p5.Color[][]}> = ({ w = 1200 , h = 1200, customColors }) => {
-  if (typeof window === 'undefined') {
-    return null;
-  }
   const sketch = (p5: p5) => {
     let shapes: SculpturalShape[] = [];
 
@@ -167,13 +159,7 @@ const Sketch: React.FC<{ reset: boolean, w?: number, h?: number, customColors?: 
       }
     };
   };
-
-  if (typeof window !== "undefined") {
-
   return <><P5Wrapper sketch={sketch} /></>;
-  } else {
-    return null;
-  }
 };
 
 export { Sketch };

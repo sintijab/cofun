@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 export default function useScrollToHash() {
   useEffect(() => {
     //TODO: setTimeout with 0 made it work in Safari - i dont know why
+    if (typeof window !== undefined) {
     setTimeout(() => {
       const { hash } = window.location
       if (hash) {
@@ -14,5 +15,6 @@ export default function useScrollToHash() {
         }
       }
     }, 0)
+  }
   }, [])
 }

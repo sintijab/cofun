@@ -28,7 +28,7 @@ export default function Trends() {
     }
   }, [])
   const list = trendsList.map((sound, i) =>
-    <Flex key={i} justifyContent="center" alignItems="center" position="relative"><Link href={sound?.source || '/trends'} isExternal={true} variant="card" position="absolute" p=".5rem" textAlign="center">{`${sound.author?.toUpperCase()} - ${sound.title?.toUpperCase()}`}</Link><Sketch reset={false} w={300} h={300} customColors={generateColorPalettes} /></Flex>
+    <Flex key={i} justifyContent="center" alignItems="center" position="relative"><Link href={sound?.source || '/trends'} isExternal={true} variant="card" position="absolute" p=".5rem" textAlign="center">{`${sound.author?.toUpperCase()} - ${sound.title?.toUpperCase()}`}</Link>{typeof window !== undefined && <Sketch reset={false} w={300} h={300} customColors={generateColorPalettes} />}</Flex>
   );
   const chunkedItems = _.chunk(list, 3);
   const info = <Flex cursor="pointer" border="1px" h="1.2rem" w="1.2rem" ml=".5rem" borderRadius="1rem" justifyContent="center" alignContent="center" flexWrap="wrap" _hover={{ boxShadow: "inset 0 0 0 150px rgba(0, 0, 0, 0.05)" }}><TextBase textStyle="button-select-info">{`?`}</TextBase></Flex>
