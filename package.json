@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx build co-fun --prod"
+    "build": "nx build co-fun --prod",
+    "predeploy": "nx build co-fun --prod",
+    "deploy": "gh-pages -d ./co-fun/out"
   },
   "private": true,
   "engines": {
