@@ -1,0 +1,19 @@
+name: setup-node
+description: "Install dependencies and build with yarn"
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Run install
+      uses: borales/actions-yarn@v4
+      with:
+        cmd: install
+
+    - name: Build production bundle
+      uses: borales/actions-yarn@v4
+      with:
+        cmd: build # will run `yarn build` command
