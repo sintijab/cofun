@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "npx nx build co-fun"
+    "build": "nx build co-fun --prod"
   },
   "private": true,
   "engines": {
-    "node": "20.18.1"
+    "node": "20.17.0"
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
