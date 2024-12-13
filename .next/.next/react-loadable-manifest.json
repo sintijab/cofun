@@ -1,0 +1,28 @@
+{
+  "../../libs/co-fun-ui/src/lib/components/Charts/ApexChart.tsx -> react-apexcharts": {
+    "id": 8153,
+    "files": [
+      "static/chunks/71134bd1.801374df45c9a5bf.js",
+      "static/chunks/153.6dfafd9a69867ca9.js"
+    ]
+  },
+  "../../libs/co-fun-ui/src/lib/components/Sketch/index.tsx -> ./P5Wrapper": {
+    "id": 8289,
+    "files": [
+      "static/chunks/cecc2c1a.001957326fdecb49.js",
+      "static/chunks/289.ab2e88c9fcc2a5a4.js"
+    ]
+  },
+  "pages/index.tsx -> @co-fun/ui": {
+    "id": 4398,
+    "files": []
+  },
+  "pages/projects.tsx -> @co-fun/ui": {
+    "id": 4398,
+    "files": []
+  },
+  "pages/trends.tsx -> @co-fun/ui": {
+    "id": 4398,
+    "files": []
+  }
+}
