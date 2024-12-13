@@ -27,12 +27,12 @@ jobs:
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./co-fun/out
       
       - name: Upload nextjs build
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.next
+          path: ./co-fun/.next
 
   deploy:
     environment:

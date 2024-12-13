@@ -46,5 +46,7 @@ Thumbs.db
 .nx/workspace-data
 
 # Next.js
+.next
+out
 
 storybook-static

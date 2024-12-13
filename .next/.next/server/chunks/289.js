@@ -1,1 +1,0 @@
-"use strict";exports.id=289,exports.ids=[289],exports.modules={8289:(e,s,t)=>{t.r(s),t.d(s,{default:()=>d});var r=t(997),u=t(6689);t(8179);let d=({sketch:e})=>{let s=(0,u.useRef)(null);return(0,u.useEffect)(()=>{},[e]),r.jsx("div",{ref:s})}}};

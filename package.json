@@ -5,7 +5,7 @@
   "scripts": {
     "build": "nx build co-fun --no-cloud --prod",
     "predeploy": "nx build co-fun --no-cloud --prod",
-    "deploy": "gh-pages -d out"
+    "deploy": "touch ./out/.nojekyll && gh-pages -d out"
   },
   "private": true,
   "engines": {
