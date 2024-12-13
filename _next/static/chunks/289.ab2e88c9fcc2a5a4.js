@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[289],{8289:function(e,u,r){r.r(u);var n=r(4246),t=r(7378),f=r(7347),s=r.n(f);u.default=e=>{let{sketch:u}=e,r=(0,t.useRef)(null);return(0,t.useEffect)(()=>{{let e=new(s())(u,r.current);return()=>{e.remove()}}},[u]),(0,n.jsx)("div",{ref:r})}}}]);
